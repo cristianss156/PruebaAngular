@@ -1,0 +1,22 @@
+<h2>Tipos de IVA</h2>
+
+<ul class="iva">
+  <li *ngFor="let iva of ivas">  	
+  	<a routerLink="/detail/{{iva.id}}">
+  	  <span class="badget">{{iva.valor}}%</span> {{iva.tipo}}
+    </a>
+    <button class="delete" title="borrar iva" (click)="delete(iva)">X</button>
+  </li>
+</ul>
+
+<div>
+	<label>Valor: 
+		<input #ivaValor type="number" value="0">
+	</label>
+	<label>Tipo: 
+		<input #ivaTipo>
+	</label>
+	<button (click)="add(ivaValor.value, ivaTipo.value); ivaValor.value=''; ivaTipo.value=''">
+	  Añadir
+    </button>
+</div>

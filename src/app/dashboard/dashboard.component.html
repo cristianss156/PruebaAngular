@@ -1,0 +1,9 @@
+<h3>Top IVAs</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let iva of ivas" class="col-1-4" routerLink="/detail/{{iva.id}}">
+    <div class="module iva">
+      <h4>{{iva.tipo}}</h4>
+    </div>
+  </a>
+</div>
+<app-iva-search></app-iva-search>

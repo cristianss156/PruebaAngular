@@ -1,0 +1,15 @@
+<div *ngIf="iva">
+  <h2>Detalle de iva {{iva[0].tipo | uppercase}}</h2>
+  <div>
+  	<label>valor: 
+  	  <input [(ngModel)]="iva[0].valor" placeholder="0">%
+  	</label>
+  </div>
+  <div>
+    <label>tipo: 
+  	  <input [(ngModel)]="iva[0].tipo" placeholder="tipo" />
+    </label>
+  </div>
+  <button (click)="goBack()">Atras</button>
+  <button (click)="save()">Guardar</button>
+</div>
