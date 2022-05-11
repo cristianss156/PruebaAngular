@@ -1,3 +1,4 @@
+//@ts-check
 import { Injectable } from '@angular/core';
 
 @Injectable({

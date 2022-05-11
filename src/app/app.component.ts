@@ -1,3 +1,4 @@
+//@ts-check
 import { Component } from '@angular/core';
 
 @Component({

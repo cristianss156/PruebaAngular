@@ -1,4 +1,4 @@
-
+//@ts-checks
 import { Component, OnInit, Input } from '@angular/core';
 import { Iva } from '../iva';
 import { ActivatedRoute } from '@angular/router';

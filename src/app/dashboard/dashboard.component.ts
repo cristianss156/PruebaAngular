@@ -1,3 +1,4 @@
+//@ts-checks
 import { Component, OnInit } from '@angular/core';
 import { Iva } from '../iva';
 import { IvaService } from '../iva.service';

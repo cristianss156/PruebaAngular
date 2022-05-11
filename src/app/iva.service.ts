@@ -1,3 +1,4 @@
+//@ts-check
 import { Injectable } from '@angular/core';
 import { Iva } from './iva';
 import { Observable, of} from 'rxjs';
