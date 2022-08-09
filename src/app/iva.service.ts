@@ -4,7 +4,7 @@ import { Iva } from './iva';
 import { Observable, of} from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +12,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 export class IvaService {
 
-  private ivasUrl = 'http://localhost/html/demo-angular/php/listIva.php';
-
+  private ivasUrl = 'http://pruebasweb.es/PruebaAngular/php/listIva.php';
+  
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
   getIva (a: number): Observable<Iva> {
