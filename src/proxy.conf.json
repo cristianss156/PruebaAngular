@@ -1,0 +1,6 @@
+{
+  "/api": {
+  "target": "http://pruebasweb.es:80",
+  "secure": false
+  }
+}

@@ -12,7 +12,8 @@ import { catchError, tap } from 'rxjs/operators';
 
 export class IvaService {
 
-  private ivasUrl = 'http://pruebasweb.es/PruebaAngular/php/listIva.php';
+  // private ivasUrl = 'http://pruebasweb.es/PruebaAngular/php/listIva.php';
+  private ivasUrl = 'http://pruebaangular.pruebasweb.es/php/listIva.php';
   
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
