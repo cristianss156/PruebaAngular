@@ -11,8 +11,8 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-devkit/schematics": "^14.1.1",
-    "@angular-devkit/schematics-cli": "^13.2.3",
+    "@angular-devkit/schematics": "^21.2.3",
+    "@angular-devkit/schematics-cli": "^21.2.3",
     "@angular/animations": "^14.1.1",
     "@angular/common": "^14.1.1",
     "@angular/compiler": "^14.1.1",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^20.0.1",
-    "@angular/cli": "^14.1.1",
+    "@angular/cli": "^21.2.3",
     "@angular/compiler-cli": "^14.1.1",
     "@angular/language-service": "^14.1.1",
     "@types/jasmine": "~3.10.3",
