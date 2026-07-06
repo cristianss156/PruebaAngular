@@ -4,9 +4,10 @@ import { Iva } from '../iva';
 import { IvaService } from '../iva.service';
 
 @Component({
-  selector: 'app-iva',
-  templateUrl: './iva.component.html',
-  styleUrls: ['./iva.component.css']
+    selector: 'app-iva',
+    templateUrl: './iva.component.html',
+    styleUrls: ['./iva.component.css'],
+    standalone: false
 })
 
 export class IvaComponent implements OnInit {

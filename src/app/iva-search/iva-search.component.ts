@@ -11,9 +11,10 @@ import { Iva } from '../iva';
 import { IvaService } from '../iva.service';
 
 @Component({
-  selector: 'app-iva-search',
-  templateUrl: './iva-search.component.html',
-  styleUrls: [ './iva-search.component.css' ]
+    selector: 'app-iva-search',
+    templateUrl: './iva-search.component.html',
+    styleUrls: ['./iva-search.component.css'],
+    standalone: false
 })
 export class IvaSearchComponent implements OnInit {
   ivas$: Observable<Iva[]>;

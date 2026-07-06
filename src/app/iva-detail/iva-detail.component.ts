@@ -6,9 +6,10 @@ import { Location } from '@angular/common';
 import { IvaService } from '../iva.service';
 
 @Component({
-  selector: 'app-iva-detail',
-  templateUrl: './iva-detail.component.html',
-  styleUrls: ['./iva-detail.component.css']
+    selector: 'app-iva-detail',
+    templateUrl: './iva-detail.component.html',
+    styleUrls: ['./iva-detail.component.css'],
+    standalone: false
 })
 export class IvaDetailComponent implements OnInit {
   @Input() iva: Iva;
