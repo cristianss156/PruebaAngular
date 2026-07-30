@@ -10,6 +10,7 @@
     "e2e": "ng e2e"
   },
   "private": true,
+  "type": "module",
   "dependencies": {
     "@angular-devkit/schematics": "^19.2.27",
     "@angular-devkit/schematics-cli": "^14.1.1",

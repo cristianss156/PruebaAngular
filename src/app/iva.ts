@@ -1,6 +1,6 @@
 //@ts-check
 export class Iva {
-  id: number;
-  valor: number;
-  tipo: string;
+  id: number | undefined;
+  valor: number | undefined;
+  tipo: string | undefined;
 }

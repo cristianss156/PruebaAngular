@@ -1,8 +1,10 @@
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { TestBed, waitForAsync } from '@angular/core/testing';
+import { AppComponent } from './app.component.js';
+import { beforeEach, describe, it } from 'node:test';
+import { ExpectedConditions } from 'node_modules/protractor/built/index.js';
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent

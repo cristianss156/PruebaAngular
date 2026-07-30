@@ -1,8 +1,8 @@
 //@ts-check
 import { Injectable } from '@angular/core';
-import { Iva } from './iva';
+import { Iva } from './iva.js';
 import { Observable, of } from 'rxjs';
-import { MessageService } from './message.service';
+import { MessageService } from './message.service.js';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { catchError, tap } from 'rxjs/operators';
 

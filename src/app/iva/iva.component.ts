@@ -1,19 +1,19 @@
 //@ts-check
 import { Component, OnInit } from '@angular/core';
-import { Iva } from '../iva';
-import { IvaService } from '../iva.service';
+import { Iva } from '../iva.js';
+import { IvaService } from '../iva.service.js';
 
 @Component({
-    selector: 'app-iva',
-    templateUrl: './iva.component.html',
-    styleUrls: ['./iva.component.css'],
-    standalone: false
+  selector: 'app-iva',
+  templateUrl: './iva.component.html',
+  styleUrls: ['./iva.component.css'],
+  standalone: false
 })
 
 export class IvaComponent implements OnInit {
-  ivas: Iva[];
+  ivas: Iva[] = [];
 
-  constructor(private ivaService: IvaService) {}
+  constructor(private ivaService: IvaService) { }
 
   ngOnInit() {
     this.getIvas();
@@ -23,16 +23,16 @@ export class IvaComponent implements OnInit {
     this.ivaService.getIvas().subscribe(ivas => this.ivas = ivas);
   }
 
-  add(valor:number, tipo:string): void {
+  add(valor: number, tipo: string): void {
     tipo = tipo.trim();
-    if (!tipo || valor<=0) { return; }
+    if (!tipo || valor <= 0) { return; }
     this.ivaService.addIva({ valor, tipo } as Iva)
       .subscribe(iva => {
         this.ivas.push(iva);
       });
   }
 
-  delete(iva: Iva): void {    
+  delete(iva: Iva): void {
     this.ivaService.deleteIva(iva).subscribe();
     this.ivas = this.ivas.filter(i => i !== iva);
   }

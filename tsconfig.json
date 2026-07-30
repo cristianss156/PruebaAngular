@@ -3,25 +3,45 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "ignoreDeprecations": "6.0",
     "sourceMap": true,
     "esModuleInterop": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "module": "es2020",
-    "moduleResolution": "node",
+    "module": "node16",
+    "moduleResolution": "node16",
     "importHelpers": true,
     "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2018",
+      "ES2022",
       "dom"
     ],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "skipLibCheck": true,
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ],
+      "*": [
+        "*",
+        "src/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputTypes": true,
+    "strictNullInputTypes": true,
+    "strictAttributeTypes": true,
+    "strictSafeNavigationTypes": true,
+    "strictDomLocalRefTypes": true,
+    "strictOutputEventTypes": true,
+    "strictDomEventTypes": true,
+    "strictContextGenerics": true,
+    "strictLiteralTypes": true
   }
 }

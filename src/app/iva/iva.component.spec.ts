@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { IvaComponent } from './iva.component';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { IvaComponent } from './iva.component.js';
+import { beforeEach, describe, it } from 'node:test';
 
 describe('IvaComponent', () => {
   let component: IvaComponent;
   let fixture: ComponentFixture<IvaComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ IvaComponent ]
+      declarations: [IvaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
