@@ -1,10 +1,12 @@
 <div id="search-component">
-	<h4><label for="search-box">Busquda de Iva</label></h4>
-	<input #searchBox id="search-box" (input)="search(searchBox.value)" />
+  <h4><label for="search-box">Busquda de Iva</label></h4>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
 
-	<ul class="search-result">
-	  <li *ngFor="let iva of ivas$ | async">
-	    <a routerLink="/detail/{{iva.id}}">{{iva.valor}}% - {{iva.tipo}}</a>
-	  </li>
-	</ul>  
+  <ul class="search-result">
+    @for (iva of ivas$ | async; track iva) {
+      <li>
+        <a routerLink="/detail/{{iva.id}}">{{iva.valor}}% - {{iva.tipo}}</a>
+      </li>
+    }
+  </ul>
 </div>
