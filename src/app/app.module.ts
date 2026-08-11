@@ -2,17 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
-import { AppComponent } from './app.component';
-import { IvaComponent } from './iva/iva.component';
-import { IvaDetailComponent } from './iva-detail/iva-detail.component';
-import { MessagesComponent } from './messages/messages.component';
-import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { IvaSearchComponent } from './iva-search/iva-search.component';
+import { AppComponent } from './app.component.js';
+import { IvaComponent } from './iva/iva.component.js';
+import { IvaDetailComponent } from './iva-detail/iva-detail.component.js';
+import { MessagesComponent } from './messages/messages.component.js';
+import { AppRoutingModule } from './app-routing.module.js';
+import { DashboardComponent } from './dashboard/dashboard.component.js';
+import { IvaSearchComponent } from './iva-search/iva-search.component.js';
 
-@NgModule({ declarations: [
+@NgModule({
+    declarations: [
         AppComponent,
         IvaComponent,
         IvaDetailComponent,
@@ -22,5 +22,6 @@ import { IvaSearchComponent } from './iva-search/iva-search.component';
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         FormsModule,
-        AppRoutingModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        AppRoutingModule], providers: [provideHttpClient(withInterceptorsFromDi())]
+})
 export class AppModule { }

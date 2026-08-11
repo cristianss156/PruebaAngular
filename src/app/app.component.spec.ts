@@ -1,7 +1,6 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component.js';
 import { beforeEach, describe, it } from 'node:test';
-import { ExpectedConditions } from 'node_modules/protractor/built/index.js';
 
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {

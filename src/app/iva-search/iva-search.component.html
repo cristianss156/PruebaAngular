@@ -2,11 +2,13 @@
   <h4><label for="search-box">Busquda de Iva</label></h4>
   <input #searchBox id="search-box" (input)="search(searchBox.value)" />
 
+  @if (ivas$ | async) {
   <ul class="search-result">
-    @for (iva of ivas$ | async; track iva) {
-      <li>
-        <a routerLink="/detail/{{iva.id}}">{{iva.valor}}% - {{iva.tipo}}</a>
-      </li>
+    @for (iva of ivas$; track iva) {
+    <li>
+      <a routerLink="/detail/{{iva.id}}">{{iva.valor}}% - {{iva.tipo}}</a>
+    </li>
     }
   </ul>
+  }
 </div>

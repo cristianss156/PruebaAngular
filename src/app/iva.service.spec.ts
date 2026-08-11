@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
-import { IvaService } from './iva.service';
+import { IvaService } from './iva.service.js';
+import { describe, beforeEach, it } from 'node:test';
 
 describe('IvaService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

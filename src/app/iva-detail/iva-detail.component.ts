@@ -1,19 +1,19 @@
 //@ts-checks
 import { Component, OnInit, Input } from '@angular/core';
-import { Iva } from '../iva';
+import { Iva } from '../iva.js';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { IvaService } from '../iva.service';
+import { IvaService } from '../iva.service.js';
 
 @Component({
-    selector: 'app-iva-detail',
-    templateUrl: './iva-detail.component.html',
-    styleUrls: ['./iva-detail.component.css'],
-    standalone: false
+  selector: 'app-iva-detail',
+  templateUrl: './iva-detail.component.html',
+  styleUrls: ['./iva-detail.component.css'],
+  standalone: false
 })
 export class IvaDetailComponent implements OnInit {
-  @Input() iva: Iva;
-  
+  @Input() iva: Iva | undefined;
+
   constructor(
     private route: ActivatedRoute,
     private ivaService: IvaService,
@@ -25,8 +25,11 @@ export class IvaDetailComponent implements OnInit {
   }
 
   getIva(): void {
-    const id = +this.route.snapshot.paramMap.get('id');    
-    this.ivaService.getIva(id).subscribe(iva => this.iva = iva);
+    let auxId = this.route.snapshot.paramMap.get('id');
+    if (typeof auxId == 'number') {
+      const id = auxId;
+      this.ivaService.getIva(id).subscribe(iva => this.iva = iva);
+    }
   }
 
   goBack(): void {
@@ -34,7 +37,10 @@ export class IvaDetailComponent implements OnInit {
   }
 
   save(): void {
-    this.ivaService.updateIva(this.iva[0])
-      .subscribe(() => this.goBack());
+    let auxIva = this.iva;
+    if (auxIva) {
+      this.ivaService.updateIva(auxIva)
+        .subscribe(() => this.goBack());
+    }
   }
 }

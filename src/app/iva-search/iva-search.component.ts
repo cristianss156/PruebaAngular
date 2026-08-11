@@ -4,23 +4,23 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
 import {
-   debounceTime, distinctUntilChanged, switchMap
- } from 'rxjs/operators';
+  debounceTime, distinctUntilChanged, switchMap
+} from 'rxjs/operators';
 
-import { Iva } from '../iva';
-import { IvaService } from '../iva.service';
+import { Iva } from '../iva.js';
+import { IvaService } from '../iva.service.js';
 
 @Component({
-    selector: 'app-iva-search',
-    templateUrl: './iva-search.component.html',
-    styleUrls: ['./iva-search.component.css'],
-    standalone: false
+  selector: 'app-iva-search',
+  templateUrl: './iva-search.component.html',
+  styleUrls: ['./iva-search.component.css'],
+  standalone: false
 })
 export class IvaSearchComponent implements OnInit {
-  ivas$: Observable<Iva[]>;
+  ivas$!: Observable<Iva[]>;
   private searchTerms = new Subject<string>();
 
-  constructor(private ivaService: IvaService) {}
+  constructor(private ivaService: IvaService) { }
 
   // Push a search term into the observable stream.
   search(term: string): void {
