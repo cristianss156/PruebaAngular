@@ -1,5 +1,5 @@
 //@ts-check
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Iva } from '../iva.js';
 import { IvaService } from '../iva.service.js';
 
@@ -7,6 +7,7 @@ import { IvaService } from '../iva.service.js';
   selector: 'app-iva',
   templateUrl: './iva.component.html',
   styleUrls: ['./iva.component.css'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 

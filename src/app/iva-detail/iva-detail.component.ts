@@ -1,5 +1,5 @@
 //@ts-checks
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Iva } from '../iva.js';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -9,6 +9,7 @@ import { IvaService } from '../iva.service.js';
   selector: 'app-iva-detail',
   templateUrl: './iva-detail.component.html',
   styleUrls: ['./iva-detail.component.css'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class IvaDetailComponent implements OnInit {

@@ -1,5 +1,5 @@
 //@ts-check
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { Observable, Subject } from 'rxjs';
 
@@ -14,6 +14,7 @@ import { IvaService } from '../iva.service.js';
   selector: 'app-iva-search',
   templateUrl: './iva-search.component.html',
   styleUrls: ['./iva-search.component.css'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class IvaSearchComponent implements OnInit {
